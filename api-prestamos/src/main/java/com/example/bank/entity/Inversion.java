@@ -1,30 +1,24 @@
-package com.example.apiInversiones.entity;
+package com.example.bank.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
-@JsonIgnoreProperties(ignoreUnknown = true)
 @Getter @Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@NoArgsConstructor
 @Table(name="Inversiones")
 public class Inversion {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String tipo;
     @OneToOne(cascade = {CascadeType.ALL})
     //@Column(name="Plazos")
     private PlazoFijo plazo;
     private String fechaVencimiento;
-
-    public Inversion() {
-    }
 
     public Inversion(String tipo, PlazoFijo plazo, String fechaVencimiento) {
         this.tipo = tipo;

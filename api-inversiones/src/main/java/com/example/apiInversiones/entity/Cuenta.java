@@ -1,4 +1,4 @@
-package com.example.bank.entity;
+package com.example.apiInversiones.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

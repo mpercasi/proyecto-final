@@ -40,9 +40,6 @@ public class InversionController {
 
     @PostMapping("crearInversion/{numCliente}")
     public ResponseEntity<Inversion> crearInversion(@PathVariable int numCliente, @RequestBody Inversion inversion) throws NonExistentException {
-
-        //Falta buscar al cliente
-
-        return ResponseEntity.ok(system.crearInversion(inversion));
+        return ResponseEntity.ok(system.crearInversion(inversion, numCliente));
     }
 }

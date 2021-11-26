@@ -70,8 +70,12 @@ public class SystemService {
         return (int) ((fecha.getTime() - new Date().getTime()) / milisecondsByDay);
     }
 
-    public Inversion crearInversion(Inversion inversion) {
+    public Inversion crearInversion(Inversion inversion, int numCliente) {
         inversionRepository.save(inversion);
+        int cuentaId = inversionRepository.obtenerIdCuenta(numCliente);
+        int inversionId = inversion.getId();
+
+        inversionRepository.asignarInversionACuentaCliente(cuentaId, inversionId);
         return inversion;
     }
 }

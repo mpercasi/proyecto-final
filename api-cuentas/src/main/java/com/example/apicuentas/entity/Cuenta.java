@@ -1,8 +1,5 @@
 package com.example.apicuentas.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -35,7 +32,11 @@ public class Cuenta {
     @Column(name="Inversiones")
     private List<Inversion> inversiones = new ArrayList<>();
 
-    public Cuenta(String estado, double monto, String tipoMoneda, String tipo, double montoSobreGiro, int mesesAhorro, int numCliente, List<Tarjeta> tarjetas, List<Inversion> inversiones) {
+    @OneToMany(cascade = {CascadeType.ALL})
+    @Column(name="Inversiones")
+    private List<Prestamo> prestamos = new ArrayList<>();
+
+    public Cuenta(String estado, double monto, String tipoMoneda, String tipo, double montoSobreGiro, int mesesAhorro, int numCliente, List<Tarjeta> tarjetas, List<Inversion> inversiones, List<Prestamo> prestamos) {
         this.estado = estado;
         this.monto = monto;
         this.tipoMoneda = tipoMoneda;
@@ -45,5 +46,6 @@ public class Cuenta {
         this.numCliente = numCliente;
         this.tarjetas = tarjetas;
         this.inversiones = inversiones;
+        this.prestamos = prestamos;
     }
 }
