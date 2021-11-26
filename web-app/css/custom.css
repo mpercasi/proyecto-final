@@ -1,0 +1,182 @@
+html, body{
+    height: 100% !important;
+}
+
+.container{
+    height: 100%;
+}
+
+#login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bg-gradient-primary {
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    background-size: cover;
+  }
+  
+  /* Tarjeta */
+  /* .contenedor{
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+  } */
+
+  .tarjeta{
+      width: 100%;
+      max-width: 550px;
+      position: relative;
+      color: #fff;
+      transition: .3s ease all;
+      transform: rotateY(0deg);
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      cursor: pointer;
+      z-index: 2;
+      /* background-color: rgb(180, 180, 180); */
+  }
+
+  .tarjeta.active{
+      transform: rotateY(180deg);
+  }
+
+  .tarjeta > div{
+      padding: 30px;
+      border-radius: 15px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* box-shadow: 0 10px 0 rgba(90, 116, 148, 0.3); */
+  }
+
+   /******************/
+   /* Parte frontal */
+   /******************/
+  .tarjeta .frontal{
+      width: 100%;
+      background-color: rgb(18, 99, 199);
+  }
+
+  .tarjeta .logo-marca{
+      text-align: right;
+      /* min-height: 50px; */
+  }
+
+  .frontal .logo-marca i{
+      font-size: 40px;
+  }
+
+  .frontal .chip{
+      width: 100%;
+      max-width: 45px;
+      /* margin-bottom: 10px; */
+      background-color: #fff;
+      border-radius: 10%;
+      padding-left: 4px;
+      padding-right: 4px;
+  }
+
+  .frontal .grupo .label{
+      font-size: 10px;
+      color: #fff;
+      margin-bottom: 5px;
+  }
+
+  .frontal .grupo .numero{
+      font-size: 30px !important;
+  }
+
+.frontal .grupo .nombre,
+.frontal .grupo .expiracion{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}  
+
+.frontal .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+/******************/
+/* Parte trasera */
+/******************/
+.trasera{
+    width: 100%;
+    background-color: rgb(18, 99, 199);
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica{
+    height: 40px;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.trasera .datos{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos #firma{
+    width: 70%;
+}
+
+.trasera .datos #firma .firma{
+    height: 25px;
+    background-color: #fff;
+}
+
+.trasera .datos #cvv{
+    width: 20%;
+}
+
+.trasera .datos #cvv .cvv{
+    height: 25px;
+    background-color: #fff;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenido principal */
+#contenidoPrincipal{
+    min-width: 100%;
+    background: #fff;
+}
+
+#imgSinDatos{
+    width: 100%;
+}
+
+#imgSinDatos img{
+    height: 500px;
+    width: 700px;
+    margin: auto;
+}
+
+#imgSinDatos-perfil {
+    height: 100%;
+}
+
+#imgSinDatos-perfil img{
+    height: auto;
+    width: 400px;
+    margin: auto;
+}

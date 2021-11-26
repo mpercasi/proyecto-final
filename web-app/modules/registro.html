@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistema Bancario - Registro</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/1929/premium/1929205.png?token=exp=1637614478~hmac=49d93119c8fcc8f805f05d0bea76fd85">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <link href="/../static/css/custom.css" rel="stylesheet" media="all"> -->
+    <link href="/css/custom.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div id="login-container" class="row justify-content-center d-flex align-items-center">
+
+            <div class="col-xl-6 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <form class="col-lg-12" method="post">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <!-- Estás a un paso de formar parte de nuestra gran familia -->
+                                        <h1 class="h3 text-gray-900 mb-2">Formulario de registro</h1>
+                                        <p class="text-gray-900 mb-4">Por favor, ingresa los datos que se te piden</p>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group mb-4 d-flex">
+                                            <input type="text" class="form-control form-control-user rounded mr-2" id="nombre-usuario" placeholder="Nombre" required>
+                                            <input type="text" class="form-control form-control-user rounded" id="apellido-usuario" placeholder="Apellido" required>
+                                        </div>
+                                        <div class="form-group mb-2 d-flex">
+                                            <input type="email" class="form-control form-control-user rounded" id="correo-usuario" placeholder="Correo electrónico" required>
+                                        </div>
+                                        <div class="form-group mb-4 d-flex align-items-end">
+                                            <input type="number" class="form-control form-control-user rounded mr-2"id="numero-celular-usuario" placeholder="Número de teléfono" required>
+                                            <div class="d-flex flex-column">
+                                                <label for="fecha-nacimiento-usuario" class="text-secondary">Fecha de nacimiento:</label>
+                                                <input type="date" class="form-control form-control-user rounded" id="fecha-nacimiento-usuario" placeholder="Fecha de nacimiento" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <input type="text" class="form-control form-control-user rounded" id="username-usuario" placeholder="Nombre de usuario" required>
+                                        </div>
+                                        <div class="form-group mb-4 d-flex">
+                                            <input type="password" class="form-control form-control-user rounded mr-2" id="contra-usuario" placeholder="Contraseña" required>
+                                            <input type="password" class="form-control form-control-user rounded" id="confirmar-contra-usuario" placeholder="Confirma tu contraseña" required>
+                                        </div>
+                                        <a class="btn btn-primary btn-user btn-block rounded" onclick="validarInfo()"> ¡Registrarme! </a>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center d-flex flex-column">
+                                        <a class="small mb-2" href="../login.html">¡Ya cuento con un usuario!</a>
+                                        <a class="small" href="#">¿Olvidaste tu contraseña?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="/vendor/jquery/jquery.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom scripts for all pages-->
+    <!-- <script src="js/sb-admin-2.min.js"></script> -->
+    <script src="/js/main.js"></script>
+    <script src="/js/registro.js"></script>
+
+</body>
+
+</html>
