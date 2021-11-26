@@ -112,7 +112,10 @@ function crearCuenta(datos){
 
             // Oculta el modal y recarga la página
             $('#formularioAbrirCuenta').modal('hide');
-            window.location.reload();
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 5000);
 
         }
 

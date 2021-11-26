@@ -28,7 +28,7 @@ public interface PrestamoRepository extends CrudRepository<Prestamo, Integer> {
     @Query(value = "SELECT p.id FROM PRESTAMOS p WHERE p.num_cliente=:numCliente", nativeQuery = true)
     int obtenerIdPrestamo(int numCliente);
 
-    @Query(value = "SELECT c.id FROM CUENTAS c WHERE c.num_cliente=:numCliente", nativeQuery = true)
+    @Query(value = "SELECT c.id FROM CUENTAS c WHERE c.num_cliente=:numCliente AND c.tipo='Corriente'", nativeQuery = true)
     int obtenerIdCuenta(int numCliente);
 
     @Modifying

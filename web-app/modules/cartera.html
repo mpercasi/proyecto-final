@@ -3,7 +3,7 @@
 
     // Si el token no está inicializado en las variables de sesión, regresalo al login
     if(!sessionStorage.token){
-        // window.location = "login.html";
+        window.location = "login.html";
     }
 
 </script>
@@ -214,7 +214,7 @@
                                             <div class="datos">
                                                 <div id="numero" class="grupo d-flex justify-content-center">
                                                     <!-- <p class="label">Número Tarjeta</p> -->
-                                                    <p class="numero">#### #### #### ####</p>
+                                                    <p class="numero">4142 1125 8987 7788</p>
                                                 </div>
                                                 <div class="flexbox">
                                                     <div id="nombre" class="grupo d-flex align-items-end">
@@ -225,8 +225,8 @@
                                                     <div id="expiracion" class="grupo">
                                                         <p class="label">Expiración</p>
                                                         <p class="expiracion">
-                                                            <span class="mes">MM</span> /
-                                                            <span class="year">AA</span>
+                                                            <span class="mes">05</span> /
+                                                            <span class="year">25</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -253,7 +253,7 @@
                                     </div>
                                     <!-- /Tarjeta -->
                                     
-                                    <div class="mt-3 d-flex justify-content-center w-100">
+                                    <div class="mt-3 d-flex justify-content-center w-75">
                                         <button id="btn-girar" class="btn btn-primary">
                                             <i class="fas fa-sync-alt mr-1"></i>
                                             Girar
