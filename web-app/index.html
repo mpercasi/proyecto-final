@@ -189,7 +189,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div id="contenidoPrincipal" class="row mb-4">
+                    <div id="contenidoPrincipal" class="row mb-4 rounded">
                         
                     </div>
 
@@ -220,6 +220,69 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Modal para solicitar apertura de cuenta -->
+    <div class="modal fade" id="formularioAbrirCuenta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Solicitud de apertura de cuenta</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="contenedor-error-solicitud-cuenta" class="mt-1 py-2 bg-danger rounded d-none">
+                        <p id="mensaje-error-solicitud-cuenta" class="text-center text-dark font-weight-bold m-0">...</p>
+                    </div>
+                    <form class="mt-4 px-3">
+                        <div class="form-group mb-4 d-flex align-items-center">
+                            <label class="text-secondary mr-2 col-5">Tipo de cuenta:</label>
+                            <div class="d-flex justify-content-center">
+                                <div class="form-check form-check-inline mr-4">
+                                    <input class="form-check-input" type="radio" id="radio-cuenta-corriente" value="Corriente">
+                                    <label class="form-check-label" for="radio-cuenta-corriente">Débito</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="radio-cuenta-ahorro" value="Ahorro">
+                                    <label class="form-check-label" for="radio-cuenta-ahorro">Ahorro</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4 d-flex align-items-center">
+                            <label class="text-secondary mr-2 col-5">Monto de apertura:</label>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <label class="text-secondary mb-0 mr-2">$</label>
+                                <input type="number" class="form-control form-control-user rounded mr-3" id="monto-apertura" placeholder="1000.00">
+                                <label class="text-secondary mb-0">MXN</label>
+                            </div>
+                        </div>
+
+                        <!-- Si es de ahorro muestra esto -->
+                        <div id="monto-ahorro-item" class="form-group mb-4 d-none align-items-center">
+                            <label class="text-secondary mr-2 col-5">Tiempo de ahorro:</label>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <select class="custom-select mr-sm-2" id="tiempo-ahorro">
+                                    <option selected>Selecciona una opción...</option>
+                                    <option value="3">3</option>
+                                    <option value="6">6</option>
+                                    <option value="12">12</option>
+                                  </select>
+                                <label class="text-secondary mb-0">Meses</label>
+                            </div>
+                        </div>
+
+                    </form>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" onclick="validarDatosCuenta()">¡Abrir cuenta!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

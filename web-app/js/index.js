@@ -11,14 +11,18 @@ function consultarInfoUsuario(){
 
         if(response[0].cuentas,length == 0){
             document.getElementById("contenidoPrincipal").innerHTML = '\
-            <div id="imgSinDatos" class="d-flex justify-content-center flex-column">\
+            <div id="imgSinDatos" class="d-flex justify-content-center flex-column rounded">\
                 <h3 class="w-100 text-center mt-5 mb-3">Todavía no tienes una cuenta</h3>\
                 <div class="d-flex justify-content-center mb-2">\
-                    <a class="btn btn-primary">¡Clic aquí para aperturar tu primera cuenta!</a>\
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#formularioAbrirCuenta">¡Clic aquí para aperturar tu primera cuenta!</a>\
                 </div>\
                 <img src="img/no-data.jpg">\
             </div>';
         }
+
+        // Guarda el numero de cliente para cualquier transacción
+        sessionStorage.setItem("numCliente", response[0].numCliente);
+
     }).fail(function (jqXHR, textStatus, errorThrown){
         console.log(jqXHR.status);
         console.log(textStatus);
