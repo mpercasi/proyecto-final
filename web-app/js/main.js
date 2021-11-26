@@ -4,7 +4,7 @@ let servidor = "localhost";
 let puerto_api_usuarios = "8080";
 
 //API CUENTAS
-// let puerto = "8081";
+let puerto_api_cuentas = "8082";
 
 function generarToken(){
     sessionStorage.setItem("token", true);
@@ -28,6 +28,13 @@ function createToast(pos, status, title){
         icon: status,
         title: title
     })
+}
+
+// Formateador de números
+function separator(num) {
+    let str = num.toString().split(".");
+    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return str.join(".");
 }
 
 function cerrarSesion(){

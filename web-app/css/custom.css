@@ -180,3 +180,22 @@ html, body{
     width: 400px;
     margin: auto;
 }
+
+/* Cuenta saldo */
+#saldo-monto-cuenta{
+    background-color: #1cc88a;
+    border: 5px solid #169b6b;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 0 10px;
+}
+
+#saldo-monto-cuenta-ahorro{
+    background-color: #4e73df;
+    border: 5px solid #2653d4;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 0 10px;
+}

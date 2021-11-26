@@ -86,27 +86,27 @@ function solicitarRegistro(datos){
         "data": JSON.stringify(datos),
     };
         
-        $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function (response) {
 
-            if(typeof response == "string"){
-                createToast('top-end', 'warning', response);
-            } else{
-                Swal.fire({
-                    title: '¡Proceso exitoso!',
-                    icon: 'success',
-                    text: 'Tu cuenta ha sido creada con exito, tu nuevo número de usuario es: ' + datos.numCliente,
-                    confirmButtonText: 'Ir al login',
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location = "../login.html";    
-                    } 
-                })
-            }
+        if(typeof response == "string"){
+            createToast('top-end', 'warning', response);
+        } else{
+            Swal.fire({
+                title: '¡Proceso exitoso!',
+                icon: 'success',
+                text: 'Tu cuenta ha sido creada con exito, tu nuevo número de usuario es: ' + datos.numCliente,
+                confirmButtonText: 'Ir al login',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "../login.html";    
+                } 
+            })
+        }
 
-        }).fail(function (jqXHR, textStatus, errorThrown){
-            console.log(jqXHR.status);
-            console.log(textStatus);
-        });
+    }).fail(function (jqXHR, textStatus, errorThrown){
+        console.log(jqXHR.status);
+        console.log(textStatus);
+    });
 }
 
 function calcularEdad(fecha){
