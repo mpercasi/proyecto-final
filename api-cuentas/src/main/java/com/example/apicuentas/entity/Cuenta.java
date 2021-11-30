@@ -10,7 +10,6 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-@NoArgsConstructor
 @Table(name="Cuentas")
 public class Cuenta {
     @Id
@@ -36,6 +35,11 @@ public class Cuenta {
     @Column(name="Inversiones")
     private List<Prestamo> prestamos = new ArrayList<>();
 
+    public Cuenta()
+    {
+
+
+    }
     public Cuenta(String estado, double monto, String tipoMoneda, String tipo, double montoSobreGiro, int mesesAhorro, int numCliente, List<Tarjeta> tarjetas, List<Inversion> inversiones, List<Prestamo> prestamos) {
         this.estado = estado;
         this.monto = monto;

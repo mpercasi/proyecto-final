@@ -6,8 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class DetalleInversion {
     private double monto;
+
+    public DetalleInversion()
+    {
+
+    }
+    public DetalleInversion(double monto) {
+        this.monto = monto;
+    }
 }
